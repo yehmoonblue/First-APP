@@ -24,15 +24,15 @@
     <input type="date" class="form-control" id="date" placeholder="日期">
    </div>
    <div class="form-group">
-    <label for="name">項目</label>
+    <label for="name">詳細資料</label>
     <input type="text" class="form-control" id="name" placeholder="便當">
    </div>
    <div class="form-group">
     <label for="number">金額</label>
     <input type="text" class="form-control" id="number" placeholder="70">
    </div>
-   <a class="btn btn-primary btn-lg btn-block" onclick="additem()">儲存</a>
-   <a class="btn btn-primary btn-lg btn-block" href="index.html" style="margin-top:100px;">捨去</a>
+   <a class="btn btn-primary btn-lg btn-block" onclick="additem()" href="Record.html">儲存</a>
+   <a class="btn btn-primary btn-lg btn-block" href="index.html" style="margin-top:150px;">捨去</a>
  </div>
 </div>
 
@@ -40,16 +40,14 @@
 function additem(){
     MoneyCollection.insert({
         date: $("input#date").val(),
-        type: $("input#type").val(),
         name: $("input#name").val(),
         number: $("input#number").val()
       });
     MoneyCollection.save();
     $("input#date").val("");
-    $("input#type").val("");
     $("input#name").val("");
     $("input#number").val("");
-    alert("儲存成功")
+    alert("儲存完成")
     
  }  
 </script>
