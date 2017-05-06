@@ -14,12 +14,48 @@
       <div class="row">
         <div class = "col-md-12" style = "text-align:center;">
           <img src="picture/圖片5.png" width = "340px" style="margin-top:10px;"/>
-          <a class="btn btn-primary btn-lg btn-block" href="Record.html" style="margin-top:50px;">儲存</a>
-          <a class="btn btn-primary btn-lg btn-block" href="index.html" style="margin-top:100px;">捨去</a>
         </div>
       </div>
     </div>
+    <div class="container">
+ <div class="col-md-12" style="text-align:center;">
+  <div>
+    <h1 style="margin-bottom:20px;">新增帳目</h1>  
+  </div>
+  <div class="form-group">
+    <label for="date">日期</label>
+    <input type="date" class="form-control" id="date" placeholder="日期">
+   </div>
+   <div class="form-group">
+    <label for="name">項目</label>
+    <input type="text" class="form-control" id="name" placeholder="便當">
+   </div>
+   <div class="form-group">
+    <label for="number">金額</label>
+    <input type="text" class="form-control" id="number" placeholder="70">
+   </div>
+   <a class="btn btn-primary btn-lg btn-block" onclick="additem()">儲存</a>
+   <a class="btn btn-primary btn-lg btn-block" href="index.html" style="margin-top:100px;">捨去</a>
+ </div>
+</div>
+
+<script>
+function additem(){
+    MoneyCollection.insert({
+        date: $("input#date").val(),
+        type: $("input#type").val(),
+        name: $("input#name").val(),
+        number: $("input#number").val()
+      });
+    MoneyCollection.save();
+    $("input#date").val("");
+    $("input#type").val("");
+    $("input#name").val("");
+    $("input#number").val("");
+    alert("儲存成功")
     
+ }  
+</script>
     
     
     
