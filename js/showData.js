@@ -10,7 +10,7 @@ MoneyCollection.load(function(){
   );
   
   for(var i=0;i<result.length;i++){
-    var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</td></tr>
+    var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</tr>
     $("table#commenttable tbody").append(commentdata);
     
     switch(result[i].name){
