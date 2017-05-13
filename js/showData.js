@@ -36,7 +36,7 @@ MoneyCollection.load(function(){
   };
   
   drawMyChart(this.sum)
-};
+});
 
 function drawMyChart(sum){
     if(!!document.createElement('canvas').getContext){ 
