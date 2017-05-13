@@ -33,7 +33,7 @@
     <input type="text" class="form-control" id="number" placeholder="70">
    </div>
    <a href="index.html"><img src="picture/5.png" width = "150px" style="margin-top:10px;"/></a>
-   <a onclick="additem()" href="Record.html"><img src="picture/4.png" width = "150px" style="margin-top:10px;"/></a>
+   <a  href="Record.html"><img src="picture/4.png" onclick="additem()" width = "150px" style="margin-top:10px;"/></a>
  </div>
 </div>
 
@@ -49,7 +49,6 @@ function additem(){
     $("input#name").val("");
     $("input#number").val("");
     alert("儲存完成")
-  console.log(88)
     
  }  
 </script>
