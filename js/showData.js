@@ -10,10 +10,10 @@ MoneyCollection.load(function(){
   );
   
   for(var i=0;i<result.length;i++){
-    var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].type+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</tr>"
+    var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</tr>"
     $("table#commenttable tbody").append(commentdata);
     
-    switch(result[i].type){
+    switch(result[i].name){
       case "食":
         this.sum[0] = this.sum[0] + result[i].number/1
         break;
