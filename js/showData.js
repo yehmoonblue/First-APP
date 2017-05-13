@@ -54,16 +54,14 @@ function deleteitem(){
       console.log(id)
       var r=confirm("你確定要刪掉嗎？")
       if(r){
-        studentCollection.remove({
+        MoneyCollection.remove({
           _id:id
         });  
-        studentCollection.save();
-        showitem();
+        MoneyCollection.save();
       };
         console.log(777);
-      }}
+      }
       
       $("table").on("click","button#deleteitem",deleteitem);
-    $("table").on("click","a#items",searchdetail);
 
 
