@@ -47,3 +47,23 @@ function drawMyChart(sum){
       mychart.draw();
     }
   }
+
+
+function deleteitem(){
+      var id = $(this).data("id");
+      console.log(id)
+      var r=confirm("你確定要刪掉嗎？")
+      if(r){
+        studentCollection.remove({
+          _id:id
+        });  
+        studentCollection.save();
+        showitem();
+      };
+        console.log(777);
+      }}
+      
+      $("table").on("click","button#deleteitem",deleteitem);
+    $("table").on("click","a#items",searchdetail);
+
+
