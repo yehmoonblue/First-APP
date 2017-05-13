@@ -52,7 +52,7 @@ function drawMyChart(sum){
 function deleteitem(){
       var id = $(this).data("id");
       console.log(id)
-      var r=confirm("你確定要刪掉嗎？")
+      var r=confirm
       if(r){
         MoneyCollection.remove({
           _id:id
