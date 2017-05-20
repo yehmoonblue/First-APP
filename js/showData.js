@@ -17,14 +17,7 @@ MoneyCollection.load(function(){
   drawMyChart(this.sum)
 });
 
-function drawMyChart(sum){
-    if(!!document.createElement('canvas').getContext){ 
-      var mychart = new AwesomeChart('canvas1');
-      mychart.title = "消費總覽";
-      mychart.data = [sum[0], sum[1], sum[2], sum[3], sum[4], sum[5]];
-      mychart.draw();
-    }
-  }
+
 
 
 function deleteitem(){
