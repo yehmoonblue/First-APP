@@ -15,11 +15,6 @@ MoneyCollection.load(function(){
     };
 });
 
-  function showitem(){
-        MoneyCollection.load(function(){
-  $("table#commenttable tbody").text("");
-  }
-
 
 function deleteitem(){
       var id = $(this).data("id");
