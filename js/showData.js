@@ -9,15 +9,21 @@ MoneyCollection.load(function(){
     { $orderBy: {date:-1},$limit: 10}
   );
   
-  function showitem(){
     for(var i=0;i<result.length;i++){
       var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</td><td>"+"<button id='deleteitem' type='button' class='btn btn-default' data-id='"+MoneyCollection.find()[i]._id+"'>刪除</button>"+"</tr>"
       $("table#commenttable tbody").append(commentdata);
     };
-  }
 });
 
-
+  function showitem(){
+    MoneyCollection.load(function(){
+  $("table#commenttable tbody").text("");
+  
+  var result= MoneyCollection.find(
+    { },
+    { $orderBy: {date:-1},$limit: 10}
+  );
+  }
 
 
 function deleteitem(){
@@ -33,6 +39,9 @@ function deleteitem(){
       };
         console.log(777);
       }
+
+
+
 
 
       
