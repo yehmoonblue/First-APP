@@ -25,7 +25,6 @@ function deleteitem(){
           _id:id
         });  
         MoneyCollection.save();
-        showitem();
       };
         console.log(777);
       }
