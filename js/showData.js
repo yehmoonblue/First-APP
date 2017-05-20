@@ -30,8 +30,9 @@ function deleteitem(){
         MoneyCollection.save();
       };
         console.log(777);
+  
       }
       
       $("table").on("click","button#deleteitem",deleteitem);
 
-
+<link href="Record.html">
