@@ -28,6 +28,7 @@ function deleteitem(){
           _id:id
         });  
         MoneyCollection.save();
+        <a href="Record.html"></a>
       };
         console.log(777);
       }
