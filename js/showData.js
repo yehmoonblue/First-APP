@@ -35,4 +35,3 @@ function deleteitem(){
       
       $("table").on("click","button#deleteitem",deleteitem);
 
-<link href="Record.html">
