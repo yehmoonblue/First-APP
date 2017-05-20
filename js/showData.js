@@ -14,7 +14,6 @@ MoneyCollection.load(function(){
     $("table#commenttable tbody").append(commentdata);
   };
   
-  drawMyChart(this.sum)
 });
 
 
