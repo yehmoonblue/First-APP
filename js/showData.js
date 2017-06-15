@@ -10,13 +10,13 @@ MoneyCollection.load(function(){
   );
   
     for(var i=0;i<result.length;i++){
-      var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</td><td>"+"<button id='deleteitem' type='button' class='btn btn-default' data-id='"+MoneyCollection.find()[i]._id+"'>刪除</button>"+"</td></tr>"
+      var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</td></tr>"
       $("table#commenttable tbody").append(commentdata);
     };
 });
 
 
-function deleteitem(){
+/*function deleteitem(){
       var id = $(this).data("id");
       console.log(id)
       var r=confirm("你確定要刪掉嗎？")
@@ -28,11 +28,11 @@ function deleteitem(){
       };
         console.log(777);
       }
-
-
+        
 
 
 
       
       $("table").on("click","button#deleteitem",deleteitem);
+      */
 
