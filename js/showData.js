@@ -10,7 +10,7 @@ MoneyCollection.load(function(){
   
   
   for(var i=0;i<result.length;i++){
-    var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</td><td>"+"<button id='deleteitem' type='button' class='btn btn-default' data-id='"+MoneyCollection.find()[i]._id+"'>刪除</button>"+"</td></tr>"
+    var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].type+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</td><td>"+"<button id='deleteitem' type='button' class='btn btn-default' data-id='"+MoneyCollection.find()[i]._id+"'>刪除</button>"+"</td></tr>"
     $("table#commenttable tbody").append(commentdata);
   };
 });
