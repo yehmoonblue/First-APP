@@ -10,13 +10,13 @@ MoneyCollection.load(function(){
   );
   
     for(var i=0;i<result.length;i++){
-      var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</td></tr>"
+      var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</td><td>"+result[i].deleteitem+"</td></tr>"
       $("table#commenttable tbody").append(commentdata);
     };
 });
 
 
-/*function deleteitem(){
+function deleteitem(){
       var id = $(this).data("id");
       console.log(id)
       var r=confirm("你確定要刪掉嗎？")
@@ -34,5 +34,4 @@ MoneyCollection.load(function(){
 
       
       $("table").on("click","button#deleteitem",deleteitem);
-      */
-
+      
