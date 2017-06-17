@@ -27,7 +27,7 @@ MoneyCollection.load(function(){
         break;
       default:
         this.sum[4] = this.sum[4] + result[i].number/1
-        break,
+        break;
                          }
   };
   /*drawMyChart(this.sum)
