@@ -1,4 +1,4 @@
-var sum = [0,0,0,0,0,0]
+/*var sum = [0,0,0,0,0,0]
 
 MoneyCollection.load(function(){
   $("table#commenttable tbody").text("");
@@ -30,7 +30,7 @@ MoneyCollection.load(function(){
         break;
                          }
   };
-  /*drawMyChart(this.sum)
+  drawMyChart(this.sum)
 });
 
 
@@ -42,7 +42,7 @@ function drawMyChart(sum){
       mychart.labels = ["食","衣","行","樂","其他"];
       mychart.draw();
     }
-  }*/
+  }
 
 function deleteitem(){
   var id = $(this).data("id");
@@ -59,4 +59,4 @@ function deleteitem(){
 
 $("table").on("click","button#deleteitem",deleteitem);
 
-  
+  */
