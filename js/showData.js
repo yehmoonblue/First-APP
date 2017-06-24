@@ -33,7 +33,7 @@ MoneyCollection.load(function(){
   drawMyChart(this.sum)
 });
 
-
+/*
 function drawMyChart(sum){
     if(!!document.createElement('canvas').getContext){ 
       var mychart = new AwesomeChart('canvas1');
@@ -43,7 +43,7 @@ function drawMyChart(sum){
       mychart.draw();
     }
   }
-
+*/
 function deleteitem(){
   var id = $(this).data("id");
   console.log(id)
