@@ -46,11 +46,8 @@
     
     
     
-    <script>
-      var sum = [0,0,0,0,0,0];
-    var type = ["食","衣","行","樂","其他"];        
+    <script>  
       function searchDetail(){
-        var totalPrice =0;
         var query;
         if($("input#thisMonth:checked").length!=0){
           var date = new Date();
@@ -78,39 +75,11 @@
             }
           }
         }
-        query2 = { $orderBy: {date:-1},$limit: 10};
-        var result = MoneyCollection.find(query,query2);
+        var result = MoneyCollection.find(query);
         $("table#commenttable tbody").text("");
         for(var i=0;i<result.length;i++){
           var commentdata="<tr><td>"+result[i].name+"</td><td>"+result[i].type+"</td><td>"+result[i].number+"</td><td>"+result[i].date+"</tr>";
           $("table#commenttable tbody").append(commentdata);
-          
-          switch(result[i].type){
-            case "食":
-              this.sum[0] = this.sum[0] + result[i].number/1
-              break;
-              case "衣":
-              this.sum[1] = this.sum[1] + result[i].number/1
-              break;
-            case "行":
-              this.sum[2] = this.sum[2] + result[i].number/1
-              break;
-              case "樂":
-              this.sum[3] = this.sum[3] + result[i].number/1
-              break;
-              default:
-            this.sum[5] = this.sum[5] + result[i].number/1
-            break;
-                               }
-              totalPrice = totalPrice + result[i].number/1
-                                 }
-        countTypeTotal(totalPrice);
-        }
-      function countTypeTotal(totalPrice){
-        $("table#commenttable tbody").text("");
-        for(var i=0;i<sum.length;i++){
-            var commentdata = "<tr><td>"+type[i]+"</td><td>"+sum[i]+"</td><td>"+Math.floor((sum[i]/totalPrice)*100)+"%</td></tr>";
-            $("table#typeTable tbody").append(commentdata);
         }
       }
     </script>
