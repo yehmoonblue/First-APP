@@ -50,13 +50,13 @@
 
 <script>
 function additem(){
-    MoneyCollection.insert({
+    MoneysCollection.insert({
         date: $("input#date").val(),
         name: $("input#name").val(),
         number: $("input#number").val(),
       type: $("input#type").val()
       });
-    MoneyCollection.save();
+    MoneysCollection.save();
     $("input#date").val("");
     $("input#name").val("");
     $("input#number").val("");
