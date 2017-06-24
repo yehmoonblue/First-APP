@@ -44,6 +44,31 @@ function drawMyChart(sum){
     }
   }
 
+function changeChart(){
+    var random = Math.random()*6
+    var type = ""
+    if(random>=0&&random<=1){
+      type = "default"
+    }
+    else if(random>=1&&random<=2){
+      type = "horizontal bars"
+    }
+    else if(random>=2&&random<=3){
+      type = "pareto"
+    }
+    else if(random>=3&&random<=4){
+      type = "pie"
+    }
+    else if(random>=4&&random<=5){
+      type = "exploded pie"
+    }
+    else if(random>=5&&random<=6){
+      type = "doughnut"
+    }
+    drawMyChart(sum,type);
+
+  }
+
 function deleteitem(){
   var id = $(this).data("id");
   console.log(id)
