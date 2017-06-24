@@ -30,11 +30,11 @@ MoneyCollection.load(function(){
         break;
                          }
   };
-  drawMyChart(this.sum)
+  //drawMyChart(this.sum)
 });
 
 
-function drawMyChart(sum){
+/*function drawMyChart(sum){
     if(!!document.createElement('canvas').getContext){ 
       var mychart = new AwesomeChart('canvas1');
       mychart.title = "消費總覽";
@@ -67,7 +67,7 @@ function changeChart(){
     }
     drawMyChart(sum,type);
 
-  }
+  }*/
 
 function deleteitem(){
   var id = $(this).data("id");
