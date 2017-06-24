@@ -30,44 +30,7 @@ MoneyCollection.load(function(){
         break;
                          }
   };
-  //drawMyChart(this.sum)
 });
-
-
-/*function drawMyChart(sum){
-    if(!!document.createElement('canvas').getContext){ 
-      var mychart = new AwesomeChart('canvas1');
-      mychart.title = "消費總覽";
-      mychart.data = [sum[0], sum[1], sum[2], sum[3], sum[4]];
-      mychart.labels = ["食","衣","行","樂","其他"];
-      mychart.draw();
-    }
-  }
-
-function changeChart(){
-    var random = Math.random()*6
-    var type = ""
-    if(random>=0&&random<=1){
-      type = "default"
-    }
-    else if(random>=1&&random<=2){
-      type = "horizontal bars"
-    }
-    else if(random>=2&&random<=3){
-      type = "pareto"
-    }
-    else if(random>=3&&random<=4){
-      type = "pie"
-    }
-    else if(random>=4&&random<=5){
-      type = "exploded pie"
-    }
-    else if(random>=5&&random<=6){
-      type = "doughnut"
-    }
-    drawMyChart(sum,type);
-
-  }*/
 
 function deleteitem(){
   var id = $(this).data("id");
