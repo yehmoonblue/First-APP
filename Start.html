@@ -54,13 +54,13 @@ function additem(){
         date: $("input#date").val(),
         name: $("input#name").val(),
         number: $("input#number").val(),
-      type: $("input#type").val()
+      type: $("select#type").val()
       });
     MoneyCollection.save();
     $("input#date").val("");
     $("input#name").val("");
     $("input#number").val("");
-  $("input#type").val("");
+  $("select#type").val("");
     alert("儲存完成")
     
   
