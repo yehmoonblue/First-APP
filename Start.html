@@ -21,59 +21,49 @@
       </div>
     </div>
     <div class="container">
- <div class="col-md-12" style="text-align:center;">
-  <div class="form-group">
-    <label for="date" style="margin-top:30px;">日期</label>
-    <input type="date" class="form-control" id="date" placeholder="日期">
-   </div>
-   <div class="form-group">
-    <label for="name" style="margin-top:50px;">詳細資料</label>
-    <input type="text" class="form-control" id="name" placeholder="便當">
-   </div>
-   <div class="form-group">
-    <label for="type">項目</label>
-     <select type="text" class="form-control" id="type">
-     <option value="食">食</option>
-      <option value="衣">衣</option>
-      <option value="行">行</option>
-      <option value="樂">樂</option>
-      <option value="其他">其他</option>
-     </select>
-   </div>           
-   <div class="form-group">
-    <label for="number" style="margin-top:50px;">金額</label>
-    <input type="text" class="form-control" id="number" placeholder="70">
-   </div>
-   <a href="index.html"><img src="picture/5.png" width = "150px" style="margin-top:10px;"/></a>
-   <a href="Record.html" onclick="additem()"><img src="picture/4.png" width = "150px" style="margin-top:10px;"/></a>
- </div>
-</div>
-
-<script>
-function additem(){
-    MoneyCollection.insert({
-        date: $("input#date").val(),
-        name: $("input#name").val(),
-        number: $("input#number").val(),
-      type: $("select#type").val()
-      });
-    MoneyCollection.save();
-    $("input#date").val("");
-    $("input#name").val("");
-    $("input#number").val("");
-  $("select#type").val("");
-    alert("儲存完成")
+      <div class="col-md-12" style="text-align:center;">
+        <div class="form-group">
+          <label for="date" style="margin-top:30px;">日期</label>
+          <input type="date" class="form-control" id="date" placeholder="日期">
+        </div>
+        <div class="form-group">
+          <label for="name" style="margin-top:50px;">詳細資料</label>
+          <input type="text" class="form-control" id="name" placeholder="便當">
+        </div>
+        <div class="form-group">
+          <label for="type">項目</label>
+          <select type="text" class="form-control" id="type">
+            <option value="食">食</option>
+            <option value="衣">衣</option>
+            <option value="行">行</option>
+            <option value="樂">樂</option>
+            <option value="其他">其他</option>
+          </select>
+        </div>           
+        <div class="form-group">
+          <label for="number" style="margin-top:50px;">金額</label>
+          <input type="text" class="form-control" id="number" placeholder="70">
+        </div>
+        <a href="index.html"><img src="picture/5.png" width = "150px" style="margin-top:10px;"/></a>
+        <a href="Record.html" onclick="additem()"><img src="picture/4.png" width = "150px" style="margin-top:10px;"/></a>
+      </div>
+    </div>
     
-  
-  
-  
- }  
-</script>
-    
-    
-    
+    <script>
+      function additem(){
+        MoneyCollection.insert({
+          date: $("input#date").val(),
+          name: $("input#name").val(),
+          number: $("input#number").val(),
+          type: $("select#type").val()
+        });
+        MoneyCollection.save();
+        $("input#date").val("");
+        $("input#name").val("");
+        $("input#number").val("");
+        $("select#type").val("");
+        alert("儲存完成")
+      }  
+    </script>
   </body>
-  
-  
-  
 </html>
