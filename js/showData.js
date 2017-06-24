@@ -44,5 +44,3 @@ function deleteitem(){
 }
 
 $("table").on("click","button#deleteitem",deleteitem);
-
-  
