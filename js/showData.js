@@ -49,10 +49,10 @@ function deleteitem(){
   console.log(id)
   var r=confirm("你確定要刪掉嗎？")
   if(r){
-    MoneysCollection.remove({
+    MoneyCollection.remove({
       _id:id
     });  
-    MoneysCollection.save();
+    MoneyCollection.save();
   };
   console.log(777);
 }
