@@ -30,7 +30,7 @@ MoneyCollection.load(function(){
         break;
                          }
   };
-  drawMyChart(this.sum)
+  //drawMyChart(this.sum)
 });
 
 /*
