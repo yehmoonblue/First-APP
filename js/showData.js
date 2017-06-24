@@ -1,4 +1,4 @@
-/*var sum = [0,0,0,0,0,0]
+var sum = [0,0,0,0,0,0]
 
 MoneyCollection.load(function(){
   $("table#commenttable tbody").text("");
@@ -59,4 +59,4 @@ function deleteitem(){
 
 $("table").on("click","button#deleteitem",deleteitem);
 
-  */
+  
